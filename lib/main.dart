@@ -1,4 +1,6 @@
 import 'package:fifth_module_project/pages/home_page.dart';
+import 'package:fifth_module_project/pages/registration/log_in_page.dart';
+import 'package:fifth_module_project/pages/registration/sign_up_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,8 +20,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
-      routes: {HomePage.id: (context) => HomePage()},
+      home: const SignUpPage(),
+      routes: {
+        HomePage.id: (context) => HomePage(),
+        LogInPage.id: (context) => LogInPage(),
+        SignUpPage.id: (context) => SignUpPage()
+      },
     );
   }
 }
