@@ -1,3 +1,5 @@
+import 'package:fifth_module_project/widgets/register_page_widgets.dart';
+import 'package:fifth_module_project/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -37,10 +39,10 @@ class _SignUpPageState extends State<SignUpPage> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       //! #signup text
-                      _text('Sign Up', Colors.white, fontSize: 40),
-                      _space(true, 10),
+                      text('Sign Up', Colors.white, fontSize: 40),
+                      space(true, 10),
                       //! #welcome text
-                      _text('Welcome', Colors.white, fontSize: 20),
+                      text('Welcome', Colors.white, fontSize: 20),
                     ],
                   ),
                 )),
@@ -68,51 +70,51 @@ class _SignUpPageState extends State<SignUpPage> {
                               ]),
                           child: Column(children: [
                             //! #fullname
-                            _textField(Colors.grey[200]!, 'Fullname'),
+                            textField(Colors.grey[200]!, 'Fullname'),
                             //! #email
-                            _textField(Colors.grey[200]!, 'Email'),
+                            textField(Colors.grey[200]!, 'Email'),
                             //! #phone
-                            _textField(Colors.grey[200]!, 'Phome'),
+                            textField(Colors.grey[200]!, 'Phome'),
                             //! #password
-                            _textField(Colors.grey[200]!, 'Password'),
+                            textField(Colors.grey[200]!, 'Password'),
                           ]),
                         ),
-                        _space(true, 30),
+                        space(true, 30),
                         Container(
                             margin: const EdgeInsets.symmetric(horizontal: 50),
                             child:
                                 // #signup textButton
-                                _textButton(
+                                textButton(
                                     title: 'Sign Up',
                                     buttonColor: Colors.grey,
                                     textColor: Colors.white,
                                     fontSize: 20)),
-                        _space(true, 30),
-                        _text('Sign Up with SNS', Colors.grey,
+                        space(true, 30),
+                        text('Sign Up with SNS', Colors.grey,
                             fontWeight: FontWeight.bold),
-                        _space(true, 30),
+                        space(true, 30),
                         Row(
                           children: [
                             Expanded(
                                 // #facebook textButton
-                                child: _textButton(
+                                child: textButton(
                               title: 'Facebook',
                               buttonColor: Colors.blue,
                               textColor: Colors.white,
                               fontSize: 15,
                             )),
-                            _space(false, 10),
+                            space(false, 10),
                             Expanded(
                                 // #google textButton
-                                child: _textButton(
+                                child: textButton(
                                     title: 'Google',
                                     buttonColor: Colors.red,
                                     textColor: Colors.white,
                                     fontSize: 15)),
-                            _space(false, 10),
+                            space(false, 10),
                             Expanded(
                                 // #apple textButton
-                                child: _textButton(
+                                child: textButton(
                                     title: 'Apple',
                                     buttonColor: Colors.black,
                                     textColor: Colors.white,
@@ -128,63 +130,4 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
     );
   }
-}
-
-// text widget
-Widget _text(String title, Color color,
-    {double? fontSize, FontWeight? fontWeight}) {
-  return Text(
-    title,
-    style: TextStyle(fontSize: fontSize, color: color, fontWeight: fontWeight),
-  );
-}
-
-// widget for putting space
-Widget _space(side, double size) {
-  // if side is true => height
-  if (side) {
-    // if side is false => width
-    return SizedBox(
-      height: size,
-    );
-  }
-  return SizedBox(
-    width: size,
-  );
-}
-
-// textField widget
-Widget _textField(Color color, String hintTexts) {
-  return Container(
-    padding: EdgeInsets.all(10),
-    decoration: BoxDecoration(border: Border(bottom: BorderSide(color: color))),
-    child: TextField(
-      decoration:
-          InputDecoration(hintText: hintTexts, border: InputBorder.none),
-    ),
-  );
-}
-
-// textButton widget
-Widget _textButton(
-    {required String title,
-    required Color buttonColor,
-    required Color textColor,
-    double? fontSize = 15,
-    FontWeight? fontWeight}) {
-  return Container(
-    width: double.infinity,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(50),
-      color: buttonColor,
-    ),
-    child: TextButton(
-      onPressed: () {},
-      child: Text(
-        title,
-        style: TextStyle(
-            fontSize: fontSize, color: textColor, fontWeight: fontWeight),
-      ),
-    ),
-  );
 }
