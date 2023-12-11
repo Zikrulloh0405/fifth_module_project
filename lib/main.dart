@@ -1,4 +1,5 @@
 import 'package:fifth_module_project/pages/home_page.dart';
+import 'package:fifth_module_project/pages/intro_page.dart';
 import 'package:fifth_module_project/pages/registration/log_in_page.dart';
 import 'package:fifth_module_project/pages/registration/sign_up_page.dart';
 import 'package:fifth_module_project/pages/shop_ui.dart';
@@ -19,8 +20,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ShopUI(),
+      home: const IntroPage(),
       routes: {
+        IntroPage.id: (context) => IntroPage(),
         HomePage.id: (context) => HomePage(),
         LogInPage.id: (context) => LogInPage(),
         SignUpPage.id: (context) => SignUpPage(),
