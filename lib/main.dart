@@ -1,3 +1,4 @@
+import 'package:fifth_module_project/pages/car_market_page.dart';
 import 'package:fifth_module_project/pages/home_page.dart';
 import 'package:fifth_module_project/pages/intro_page.dart';
 import 'package:fifth_module_project/pages/registration/log_in_page.dart';
@@ -16,17 +17,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        brightness: Brightness.light,
         appBarTheme: const AppBarTheme(color: Colors.blue),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const IntroPage(),
+      home: const CarMarketPage(),
       routes: {
         IntroPage.id: (context) => IntroPage(),
         HomePage.id: (context) => HomePage(),
         LogInPage.id: (context) => LogInPage(),
         SignUpPage.id: (context) => SignUpPage(),
-        ShopUI.id: (context) => ShopUI()
+        ShopUI.id: (context) => ShopUI(),
+        CarMarketPage.id: (context) => CarMarketPage()
       },
     );
   }
