@@ -1,4 +1,5 @@
 import 'package:fifth_module_project/pages/hotel_ui_page.dart';
+import 'package:fifth_module_project/pages/party_ui.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,15 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: false
-      ),
+      theme: ThemeData(useMaterial3: false),
       title: 'Fifth Module',
-      home: const HotelsPageUI(),
-      routes: {
-        HotelsPageUI.id :(context) => const HotelsPageUI()
-      },
+      home: PartyUIPage(),
+      routes: {HotelsPageUI.id: (context) => const HotelsPageUI()},
     );
   }
 }
-
