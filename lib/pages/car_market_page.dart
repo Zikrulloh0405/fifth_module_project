@@ -39,7 +39,7 @@ class _CarMarketPageState extends State<CarMarketPage> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     _categoriesList(type: true, title: 'All'),
-                    _categoriesList(type: false, title: 'Red'),
+                    _categoriesList(type: true, title: 'Red'),
                     _categoriesList(type: false, title: 'Green'),
                     _categoriesList(type: false, title: 'Yellow'),
                     _categoriesList(type: false, title: 'Black'),
