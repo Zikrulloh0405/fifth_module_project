@@ -1,3 +1,4 @@
+import 'package:fifth_module_project/pages/amazon_ui.dart';
 import 'package:fifth_module_project/pages/hotel_ui_page.dart';
 import 'package:fifth_module_project/pages/party_ui.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: false),
       title: 'Fifth Module',
-      home: PartyUIPage(),
+      home: const AmazonUIPage(),
       routes: {HotelsPageUI.id: (context) => const HotelsPageUI()},
     );
   }
