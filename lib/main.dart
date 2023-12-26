@@ -1,6 +1,7 @@
-import 'package:fifth_module_project/pages/amazon_ui.dart';
+// import 'package:fifth_module_project/pages/amazon_ui.dart';
+import 'package:fifth_module_project/pages/facebook.dart';
 import 'package:fifth_module_project/pages/hotel_ui_page.dart';
-import 'package:fifth_module_project/pages/party_ui.dart';
+// import 'package:fifth_module_project/pages/party_ui.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: false),
       title: 'Fifth Module',
-      home: const AmazonUIPage(),
+      home: FacebookPage(),
       routes: {HotelsPageUI.id: (context) => const HotelsPageUI()},
     );
   }
